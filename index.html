@@ -5,38 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Gita</title>
     <!--Header Part-->
+    <div id="Head">
     <h1>BHAGAVAD GITA</h1>
+    <img src="A.webp" alt="Translate" id="Translate">
+    </div>
+    <!-- Link for various icons to be used in code  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="Stylesheet" href="Styles.css">
     <hr>
 </head>
+
 <body>
-    <!-- Sign Up form -->
-<form action="/action.php">
-<input type="text"     placeholder="Enter Your Name Here"><br>
-<input type="email"    placeholder="Enter Your Email Here"><br>
-<input type="password" placeholder="Create Your Password"><br>
-<input type="password" placeholder="Re-enter Your Password"><br>
-<input type="checkbox">I agree to all the <a href="Terms_and_conditions.html">Terms and conditions</a> mentioned 
+ <div class="container">
+    <div class="card">
+    <!-- Login Page for existing users-->
+    <div class="container">
+        <div class="login-form">
+            <form action="" method="get">
+                <h2>Login</h2>
+                <div class="form-group">
+                    <input type="email" required>
+                    <label for="">email</label>
+                    <i class="fa-solid fa-envelope"></i>
+                </div>
+                <div class="form-group">
+                    <input type="password" required>
+                    <label for="">password</label>
+                    <i class="fa-solid fa-lock"></i>
+                </div>
+                <p><input type="checkbox"> Remember me</p>
+                <input type="button" id="btn" value="login">
+                <p>Don't have a account ?<a href="#" id="Signup"> Sign up</a></p>
+            </form>
+        </div>
+    </div>
+</div>
+</div>
 <br>
-<input type="submit"> 
-</form>
-<!-- Login Page for existing users-->
-<form action="/action.php">
-    <input type="email"    placeholder="Enter Your Email Here "><br>
-    <input type="password" placeholder="Enter Your Password"><br>
-    <input type="submit"   value="Login">
-</form>    
-    <br>
-   <a href="About_Gita.html">About Gita</a> 
-    <br>
-   <a href="Shlokas(Verses).html">Shlokas(Verses)</a>
-    <br>
+<div>
+<div id="About">
+<a href="About_Gita.html">About Gita</a> 
+</div>
+<div id="Shlokas">  
+<a href="Shlokas(Verses).html">Shlokas(Verses)</a>
+</div> 
+</div>
+<br>
 </body>
+
 <footer>
     <hr>
+    <!-- Bottom of the Page -->
     About us:
-            At The Bhagavad Gita: Integrating Ancient Wisdom with Science,we aim to make the timeless wisdom of the <b>Bhagavad Gita</b> accessible to all.This website was purely made from scratch by the  students of @<a href="https://mvsrec.edu.in/">MVSREC</a>.
+            At The Bhagavad Gita: Integrating Ancient Wisdom with Science,we aim to make the timeless wisdom of the <b>Bhagavad Gita</b> accessible to all.This website was purely made from scratch by the  students of @<a href="https://mvsrec.edu.in/" target="_main">MVSREC</a>.
     Contact Us :
-           245123737136@mvsrec.edu.in
+           245123737136@mvsrec.edu.in<br>
            245123737142@mvsrec.edu.in
 </footer>
 </html>
