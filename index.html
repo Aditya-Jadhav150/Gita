@@ -4,62 +4,191 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Gita</title>
-    <!--Header Part-->
-    <div id="Head">
-    <h1>BHAGAVAD GITA</h1>
-    <img src="A.webp" alt="Translate" id="Translate">
-    </div>
     <!-- Link for various icons to be used in code  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="Stylesheet" href="Styles.css">
+    <!--Header Part-->
+    <div id="Head">
+        <h1>BHAGAVAD GITA</h1>
+        <button class="btn" id="OneBTN"><b>LANG</b><b> /</b> <b>भाषा</b><b> /</b> <b> భాష</b></button>
+    </div>
     <hr>
 </head>
 
+
 <body>
- <div class="container">
-    <div class="card">
-    <!-- Login Page for existing users-->
-    <div class="container">
-        <div class="login-form">
-            <form action="" method="get">
-                <h2>Login</h2>
-                <div class="form-group">
-                    <input type="email" required>
-                    <label for="">email</label>
-                    <i class="fa-solid fa-envelope"></i>
+<div id="overlay">
+    <div id="text">
+        <form action="#">
+            <div class="radio-container">
+                <div class="radio-option">
+                    <input type="radio" id="english" name="language" value="English">
+                    <label for="english">Press here for English</label>
                 </div>
-                <div class="form-group">
-                    <input type="password" required>
-                    <label for="">password</label>
-                    <i class="fa-solid fa-lock"></i>
+                <div class="radio-option">
+                    <input type="radio" id="hindi" name="language" value="Hindi">
+                    <label for="hindi">यहाँ हिंदी के लिए दबाएँ</label>
                 </div>
-                <p><input type="checkbox"> Remember me</p>
-                <input type="button" id="btn" value="login">
-                <p>Don't have a account ?<a href="#" id="Signup"> Sign up</a></p>
-            </form>
-        </div>
+                <div class="radio-option">
+                    <input type="radio" id="telugu" name="language" value="Telugu">
+                    <label for="telugu">ఇక్కడ తెలుగు కోసం నొక్కండి</label>
+                </div>
+                <div class="radio-option">
+                    <input type="radio" id="spanish" name="language" value="Spanish">
+                    <label for="spanish">Presione aquí para español</label>
+                </div>
+                <div class="radio-option">
+                    <input type="radio" id="french" name="language" value="French">
+                    <label for="french">Appuyez ici pour français</label>
+                </div>
+                <div class="radio-option">
+                    <input type="radio" id="german" name="language" value="German">
+                    <label for="german">Drücken Sie hier für Deutsch</label>
+                </div>
+                <div class="radio-option">
+                    <input type="radio" id="italian" name="language" value="Italian">
+                    <label for="italian">Premi qui per italiano</label>
+                </div>
+                <div class="radio-option">
+                    <input type="radio" id="portuguese" name="language" value="Portuguese">
+                    <label for="portuguese">Pressione aqui para português</label>
+                </div>
+                <div class="radio-option">
+                    <input type="radio" id="russian" name="language" value="Russian">
+                    <label for="russian">Нажмите здесь для русского</label>
+                </div>
+                <div class="radio-option">
+                    <input type="radio" id="chinese" name="language" value="Chinese">
+                    <label for="chinese">点击这里选择中文</label>
+                </div>
+                <div class="radio-option">
+                    <input type="radio" id="japanese" name="language" value="Japanese">
+                    <label for="japanese">ここを押して日本語を選択</label>
+                </div>
+                <div class="radio-option">
+                    <input type="radio" id="korean" name="language" value="Korean">
+                    <label for="korean">여기를 눌러 한국어를 선택하세요</label>
+                </div>
+                <div class="radio-option">
+                    <input type="radio" id="arabic" name="language" value="Arabic">
+                    <label for="arabic">اضغط هنا للغة العربية</label>
+                </div>
+                <div class="radio-option">
+                    <input type="radio" id="turkish" name="language" value="Turkish">
+                    <label for="turkish">Buraya tıklayarak Türkçe'yi seçin</label>
+                </div>
+                <div class="radio-option">
+                    <input type="radio" id="dutch" name="language" value="Dutch">
+                    <label for="dutch">Druk hier voor Nederlands</label>
+                </div>
+                <div class="radio-option">
+                    <input type="radio" id="greek" name="language" value="Greek">
+                    <label for="greek">Πατήστε εδώ για Ελληνικά</label>
+                </div>
+                <div class="radio-option">
+                    <input type="radio" id="swedish" name="language" value="Swedish">
+                    <label for="swedish">Tryck här för svenska</label>
+                </div>
+                <div class="radio-option">
+                    <input type="radio" id="polish" name="language" value="Polish">
+                    <label for="polish">Naciśnij tutaj, aby wybrać polski</label>
+                </div>
+                <div class="radio-option">
+                    <input type="radio" id="vietnamese" name="language" value="Vietnamese">
+                    <label for="vietnamese">Nhấn vào đây để chọn tiếng Việt</label>
+                </div>
+                <div class="radio-option">
+                    <input type="radio" id="indonesian" name="language" value="Indonesian">
+                    <label for="indonesian">Tekan di sini untuk Bahasa Indonesia</label>
+                </div>
+            </div>    
+        </form>
     </div>
 </div>
-</div>
-<br>
-<div>
-<div id="About">
-<a href="About_Gita.html">About Gita</a> 
-</div>
-<div id="Shlokas">  
-<a href="Shlokas(Verses).html">Shlokas(Verses)</a>
-</div> 
-</div>
-<br>
-</body>
 
-<footer>
-    <hr>
-    <!-- Bottom of the Page -->
-    About us:
-            At The Bhagavad Gita: Integrating Ancient Wisdom with Science,we aim to make the timeless wisdom of the <b>Bhagavad Gita</b> accessible to all.This website was purely made from scratch by the  students of @<a href="https://mvsrec.edu.in/" target="_main">MVSREC</a>.
-    Contact Us :
-           245123737136@mvsrec.edu.in<br>
-           245123737142@mvsrec.edu.in
-</footer>
+    <div class="container">
+        <div class="card">
+            <!-- Login Page for existing users-->
+            <div class="login-form">
+                <form action="" method="get">
+                    <i class="fa-solid fa-x" id="x"></i>
+                    <h2 id="login-title">Login</h2>
+                    <div class="form-group">
+                        <input type="email" required>
+                        <label for="email" id="email-label">email</label>
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" required>
+                        <label for="password" id="password-label">password</label>
+                        <i class="fa-solid fa-lock"></i>
+                    </div>
+                    <p><input type="checkbox" id="remember-me"> <span id="remember-me-label">Remember me</span></p>
+                    <input type="button" id="btn" value="login">
+                    <p id="signup-prompt">Don't have an account? <a href="#" id="Signup">Sign up</a></p>
+                </form>
+            </div>
+            <!-- Signup Page for new users-->
+            <div class="signup-form" style="display: none;">
+                <form action="" method="post">
+                    <i class="fa-solid fa-x" id="x-signup"></i>
+                    <h2 id="signup-title">Sign Up</h2>
+                    <div class="form-group">
+                        <input type="text" required>
+                        <label for="username" id="username-label">username</label>
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" required>
+                        <label for="email" id="signup-email-label">email</label>
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" required>
+                        <label for="password" id="signup-password-label">password</label>
+                        <i class="fa-solid fa-lock"></i>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" id="confirm-password" required>
+                        <label for="confirm-password" id="confirm-password-label">confirm password</label>
+                        <i class="fa-solid fa-lock"></i>
+                    </div>
+                    <input type="button" id="btn-signup" value="Sign Up">
+                    <p id="login-prompt">Already have an account? <a href="#" id="Login">Login</a></p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div id="twodivs">
+        <div id="About">
+            <a href="About_Gita.html" id="about-link">About Gita</a> 
+        </div>
+        <div id="Shlokas">  
+            <a href="Shlokas(Verses).html" id="shlokas-link">Shlokas(Verses)</a>
+    </div> 
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div>
+                <h3 id="about-us-title">About Us</h3>
+                <p id="about-us-text">At The Bhagavad Gita: Integrating Ancient Wisdom with Science, we aim to provide the <b>Bhagavad Gita</b> being accessible to all. This website was purely made by the students of <a href="https://mvsrec.edu.in/" target="_main">@  MVSREC</a></p>
+            </div>
+            <div>
+                <h3 id="contact-title">Contact</h3>
+                <p id="contact-email-1"><a href="mailto:245123737136@mvsrec.edu.in">245123737136@mvsrec.edu.in</a></p>
+            <p id="contact-email-2"><a href="mailto:245123737142@mvsrec.edu.in">245123737142@mvsrec.edu.in</a></p>
+            </div>
+            <div>
+                <h3 id="follow-us-title">Follow Us</h3>
+                <p><a href="https://www.instagram.com/mvsrconnect/" target="_main" id="instagram-link"><i class="fa-brands fa-instagram"></i> instagram</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- LINK FOR JAVASCRIPT -->
+    <script src="JAVASCRIPT.js"></script>
+</body>
 </html>
