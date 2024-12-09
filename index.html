@@ -3,108 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Gita</title>
-    <!-- Link for various icons to be used in code  -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="Stylesheet" href="Styles.css">
+    <title>Language Translation</title>
+    <link rel="stylesheet" href="Styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+</head>
+<body>
     <!--Header Part-->
     <div id="Head">
         <h1>BHAGAVAD GITA</h1>
         <button class="btn" id="OneBTN"><b>LANG</b><b> /</b> <b>भाषा</b><b> /</b> <b> భాష</b></button>
     </div>
     <hr>
-</head>
 
-
-<body>
-<div id="overlay">
-    <div id="text">
-        <form action="#">
-            <div class="radio-container">
-                <div class="radio-option">
-                    <input type="radio" id="english" name="language" value="English">
-                    <label for="english">Press here for English</label>
+    <div id="overlay">
+        <div id="text">
+            <form action="#">
+                <div class="radio-container" style="display: none;">
+                   Select Language:
+                    <select id="targetLang" class="select2"></select>
+                    <br>
+                    <button type="button" onclick="translatePage()" id="trnbutton">Translate</button>
+                    <br>
                 </div>
-                <div class="radio-option">
-                    <input type="radio" id="hindi" name="language" value="Hindi">
-                    <label for="hindi">यहाँ हिंदी के लिए दबाएँ</label>
-                </div>
-                <div class="radio-option">
-                    <input type="radio" id="telugu" name="language" value="Telugu">
-                    <label for="telugu">ఇక్కడ తెలుగు కోసం నొక్కండి</label>
-                </div>
-                <div class="radio-option">
-                    <input type="radio" id="spanish" name="language" value="Spanish">
-                    <label for="spanish">Presione aquí para español</label>
-                </div>
-                <div class="radio-option">
-                    <input type="radio" id="french" name="language" value="French">
-                    <label for="french">Appuyez ici pour français</label>
-                </div>
-                <div class="radio-option">
-                    <input type="radio" id="german" name="language" value="German">
-                    <label for="german">Drücken Sie hier für Deutsch</label>
-                </div>
-                <div class="radio-option">
-                    <input type="radio" id="italian" name="language" value="Italian">
-                    <label for="italian">Premi qui per italiano</label>
-                </div>
-                <div class="radio-option">
-                    <input type="radio" id="portuguese" name="language" value="Portuguese">
-                    <label for="portuguese">Pressione aqui para português</label>
-                </div>
-                <div class="radio-option">
-                    <input type="radio" id="russian" name="language" value="Russian">
-                    <label for="russian">Нажмите здесь для русского</label>
-                </div>
-                <div class="radio-option">
-                    <input type="radio" id="chinese" name="language" value="Chinese">
-                    <label for="chinese">点击这里选择中文</label>
-                </div>
-                <div class="radio-option">
-                    <input type="radio" id="japanese" name="language" value="Japanese">
-                    <label for="japanese">ここを押して日本語を選択</label>
-                </div>
-                <div class="radio-option">
-                    <input type="radio" id="korean" name="language" value="Korean">
-                    <label for="korean">여기를 눌러 한국어를 선택하세요</label>
-                </div>
-                <div class="radio-option">
-                    <input type="radio" id="arabic" name="language" value="Arabic">
-                    <label for="arabic">اضغط هنا للغة العربية</label>
-                </div>
-                <div class="radio-option">
-                    <input type="radio" id="turkish" name="language" value="Turkish">
-                    <label for="turkish">Buraya tıklayarak Türkçe'yi seçin</label>
-                </div>
-                <div class="radio-option">
-                    <input type="radio" id="dutch" name="language" value="Dutch">
-                    <label for="dutch">Druk hier voor Nederlands</label>
-                </div>
-                <div class="radio-option">
-                    <input type="radio" id="greek" name="language" value="Greek">
-                    <label for="greek">Πατήστε εδώ για Ελληνικά</label>
-                </div>
-                <div class="radio-option">
-                    <input type="radio" id="swedish" name="language" value="Swedish">
-                    <label for="swedish">Tryck här för svenska</label>
-                </div>
-                <div class="radio-option">
-                    <input type="radio" id="polish" name="language" value="Polish">
-                    <label for="polish">Naciśnij tutaj, aby wybrać polski</label>
-                </div>
-                <div class="radio-option">
-                    <input type="radio" id="vietnamese" name="language" value="Vietnamese">
-                    <label for="vietnamese">Nhấn vào đây để chọn tiếng Việt</label>
-                </div>
-                <div class="radio-option">
-                    <input type="radio" id="indonesian" name="language" value="Indonesian">
-                    <label for="indonesian">Tekan di sini untuk Bahasa Indonesia</label>
-                </div>
-            </div>    
-        </form>
+            </form>
+        </div>
     </div>
-</div>
 
     <div class="container">
         <div class="card">
