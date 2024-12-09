@@ -4,14 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shlokas</title>
-    <hr>
+    <link rel="stylesheet" href="Styles3.css">
 </head>
 <body>
-    <h1>Gita And It's Translations</h1>
-    <br>
+  <div class="container">
+    <div class="dropdowns">
+        <select id="chapter-select">
+            <option value="">Select Chapter</option>
+        </select>
+        <select id="verse-select">
+            <option value="">Select Verse</option>
+        </select>
+    </div>
+    <div class="Verses">
+        <h2>Verses</h2>
+        <textarea id="one" readonly></textarea>
+        <button id="play-audio">Play Audio</button>
+    </div>
+    <div class="Meaning">
+        <h2>Meaning</h2>
+        <textarea id="two" readonly></textarea>
+    </div>
+  </div>
+    <!-- Footer -->
+    <div class="f-b-content">
+        <textarea name="feedback" id="feedback" placeholder="Enter Your Feedback here if any :)"></textarea>
+    </div>
+    <script src="JAVASCRIPT3.js"></script>
 </body>
-<footer>
-    <hr>
-    <textarea name="feedback" id="feedback" placeholder="Enter Your Feedback here if any :)" rows="5" cols="50"></textarea>
-</footer>
 </html>
