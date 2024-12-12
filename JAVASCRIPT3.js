@@ -68,24 +68,31 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
     });
 
-    // Audio play button
-    document.getElementById('play-audio').addEventListener('click', async () => {
-        const text = versesTextarea.value;
-        try {
-            const response = await fetch('http://localhost:3000/api/tts', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({ text: text }),
-            });
-            if (!response.ok) {
-                throw new Error(`HTTP error! status: ${response.status}`);
-            }
-            const audio = new Audio('http://localhost:3000/output.mp3');
-            audio.play();
-        } catch (error) {
-            console.error('Error generating audio:', error);
-        }
-    });
+});
+
+//For Audio
+function speakText(text, language) {
+    let speech = new SpeechSynthesisUtterance();
+    speech.text = text;
+    speech.lang = language;
+
+    let voices = window.speechSynthesis.getVoices();
+    let preferredVoice = voices.find(voice => voice.lang === language);
+    if (preferredVoice) {
+        speech.voice = preferredVoice;
+    }
+
+    window.speechSynthesis.speak(speech);
+}
+
+document.getElementById("playVerses").addEventListener("click", () => {
+    let versesText = document.getElementById("one").value;
+    let language = "hi-IN";
+    speakText(versesText, language);
+});
+
+document.getElementById("playMeaning").addEventListener("click", () => {
+    let meaningText = document.getElementById("two").value;
+    let language = "en-US";
+    speakText(meaningText, language);
 });
