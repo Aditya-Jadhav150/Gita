@@ -269,9 +269,8 @@ document.addEventListener('DOMContentLoaded', () => {
 async function translatePage() {
     const targetLang = document.getElementById('targetLang').value;
     const radioContainer = document.querySelector('.radio-container');
-
     try {
-        const elementsToTranslate = document.querySelectorAll('h1, h2, h3, h4, h5, h6, p, span, div, button, a, li, label, input, textarea');
+        const elementsToTranslate = document.querySelectorAll('h1, h2, h3, h4, h5, h6, p, button, li, label, input, textarea, #about-link, #shlokas-link');
         const translations = [];
 
         elementsToTranslate.forEach(element => {
