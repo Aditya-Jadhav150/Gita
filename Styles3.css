@@ -64,6 +64,7 @@ button {
   border-radius: 5px;
   cursor: pointer;
   align-self: flex-start;
+  padding-bottom: 10px;
 }
 
 button:hover {
@@ -113,7 +114,7 @@ button:hover {
   color: #f0f0f0;
 }
 
-.Verses, .Meaning {
+.Verses{
   border: 2px solid #B60071;
   background-color: rgba(255, 255, 255, 0.5); /* White background with 50% transparency */
   color: #333;
@@ -124,3 +125,41 @@ button:hover {
   display: flex;
   flex-direction: column;
 }
+
+.ImageContainer{
+  height: 400px;
+  width:500px;
+}
+
+
+
+.row{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap:20px;
+}
+
+#selectone,#selecttwo{
+  color: #fff;
+  background:#81BFDA ;
+  height: 40px; 
+  width:100%;
+  padding: 0 20px;
+  outline:0;
+  border :0;
+  border-radius: 15px;
+  }
+
+  #search1,#search2{
+    position: relative;
+    left: -6px;
+    color: #fff;
+    background:#81BFDA ;
+    height: 40px; 
+    width:50%;
+    padding: 0 20px;
+    outline:0;
+    border :0;
+    border-radius: 15px;
+  }
