@@ -71,16 +71,60 @@ document.addEventListener('DOMContentLoaded', async () => {
 });
 
 //For Audio
-function speakText(text, language) {
+let voices = [];
+let selectVerses = document.querySelector("#selectone");
+let selectMeaning = document.querySelector("#selecttwo");
+let searchVerses = document.querySelector("#search1");
+let searchMeaning = document.querySelector("#search2");
+
+window.speechSynthesis.onvoiceschanged = () => {
+    voices = window.speechSynthesis.getVoices();
+
+    // Clear previous options
+    selectVerses.innerHTML = '';
+    selectMeaning.innerHTML = '';
+
+    // Add voices to the dropdowns
+    voices.forEach((voice, i) => {
+        selectVerses.options[i] = new Option(voice.name, i);
+        selectMeaning.options[i] = new Option(voice.name, i);
+    });
+
+    // Set default voices
+    if (voices.length > 0) {
+        selectVerses.value = 0;  // Default to the first voice for Verses
+        selectMeaning.value = 0;  // Default to the first voice for Meaning
+    }
+};
+
+// Function to filter the dropdown based on the search input
+function filterVoices(searchInput, selectElement) {
+    let searchTerm = searchInput.toLowerCase();
+    Array.from(selectElement.options).forEach(option => {
+        let voiceName = option.text.toLowerCase();
+        if (voiceName.includes(searchTerm)) {
+            option.style.display = "block";
+        } else {
+            option.style.display = "none";
+        }
+    });
+}
+
+searchVerses.addEventListener("input", () => {
+    filterVoices(searchVerses.value, selectVerses);
+});
+
+searchMeaning.addEventListener("input", () => {
+    filterVoices(searchMeaning.value, selectMeaning);
+});
+
+function speakText(text, language, voiceIndex) {
     let speech = new SpeechSynthesisUtterance();
     speech.text = text;
     speech.lang = language;
 
-    let voices = window.speechSynthesis.getVoices();
-    let preferredVoice = voices.find(voice => voice.lang === language);
-    if (preferredVoice) {
-        speech.voice = preferredVoice;
-    }
+    // Set the selected voice based on the index
+    speech.voice = voices[voiceIndex];
 
     window.speechSynthesis.speak(speech);
 }
@@ -88,11 +132,13 @@ function speakText(text, language) {
 document.getElementById("playVerses").addEventListener("click", () => {
     let versesText = document.getElementById("one").value;
     let language = "hi-IN";
-    speakText(versesText, language);
+    let voiceIndex = selectVerses.value; // Get selected voice index for Verses
+    speakText(versesText, language, voiceIndex);
 });
 
 document.getElementById("playMeaning").addEventListener("click", () => {
     let meaningText = document.getElementById("two").value;
     let language = "en-US";
-    speakText(meaningText, language);
+    let voiceIndex = selectMeaning.value; // Get selected voice index for Meaning
+    speakText(meaningText, language, voiceIndex);
 });
